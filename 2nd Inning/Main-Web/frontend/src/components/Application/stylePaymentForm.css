@@ -1,0 +1,159 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root{
+  font-size: 16px;
+}
+h4 {
+  color: white;
+}
+
+h5 {
+  color: white;
+}
+
+h6 {
+  color: white;
+}
+
+.Z{
+  background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./b.jpg);
+  /* line-height: normal; */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding:1em;
+}
+
+.A{
+  max-width:1170px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:1em;
+}
+
+.banana{
+  color: white;
+  line-height: 1.6;
+}
+
+ul{
+  list-style: none;
+  padding:0;
+}
+.B{
+  text-align: center;
+}
+
+.B span{
+  color:#fff;
+}
+
+.C{
+  box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+}
+
+.C > *{
+  padding: 1em;
+}
+
+.D{
+  background:transparent;
+}
+
+.D h6, .D ul{
+  text-align: center;
+  margin:0 0 1rem 0;
+}
+
+.G{
+  background:transparent;
+}
+
+.banana h6{
+  color: whitesmoke;
+}
+
+/* FORM STYLES */
+.G h5{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.G form{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.apple{
+  font-style:initial;
+  color:rgb(255, 61, 61);
+}
+
+.G form p{
+  margin:0;
+}
+
+.G form input{
+  font-size: 1.2rem;
+  color: black;
+}
+
+.G form input{
+  width:100%;
+  padding:0.6em;
+  border:1px solid #9ccff1;
+}
+
+
+/* LARGE SCREENS */
+@media(min-width:700px){
+  .C{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .C > *{
+    padding:2em;
+  }
+
+  .D h6, .D ul, .B{
+    text-align: left;
+  }
+}
+
+.paymentBtn {
+  --b: 3px;   /* border thickness */
+  --s: .15em; /* size of the corner */
+  --c: yellowgreen;
+  
+  padding: calc(.3em + var(--s)) calc(.1em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .2em;
+}
+.paymentBtn:hover,
+.paymentBtn:focus-visible{
+  --_p: 0px;
+  outline-color: var(--c);
+  outline-offset: .05em;
+}
+.paymentBtn:active {
+  background: var(--c);
+  color: #fff;
+}
+
+.paymentBtn {
+  font-family: system-ui, sans-serif;
+  font-weight:500;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+  margin: .1em;
+}
